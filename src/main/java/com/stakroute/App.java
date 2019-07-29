@@ -9,6 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+//       Create a Movie bean
         Movie movie = context.getBean("movie", Movie.class);
         System.out.println("Movie: " + movie.toString());
         context.close();
