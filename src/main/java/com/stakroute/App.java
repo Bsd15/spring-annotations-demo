@@ -1,5 +1,6 @@
 package com.stakroute;
 
+import com.stakroute.demo.BeanLifecycleDemoBean;
 import com.stakroute.domain.Movie;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -9,8 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
-        Movie movie = context.getBean("movie", Movie.class);
-        System.out.println("Movie: " + movie.toString());
+        BeanLifecycleDemoBean beanLifecycleDemoBean = context.getBean("beanLifecycleDemoBean", BeanLifecycleDemoBean.class);
         context.close();
     }
 }
